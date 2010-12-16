@@ -1,0 +1,24 @@
+<h1>Sign up</h1>
+
+<%= form_for(@user) do |f| %>
+	<%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :uni %><br />
+    <%= f.text_field :uni %>
+  </div>
+  <div class="field">
+    <%= f.label :ppassword, "Password" %><br />
+    <%= f.password_field :ppassword %>
+  </div>
+  <div class="field">
+    <%= f.label :ppassword_confirmation, "Confirmation" %><br />
+    <%= f.password_field :ppassword_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>

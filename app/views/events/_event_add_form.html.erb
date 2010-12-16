@@ -1,0 +1,22 @@
+<%= form_for @event do |f| %>
+  <%= render 'event_error', :object => f.object %>
+  <div class="field">
+  	<table>
+  		<tr>
+  			<td><%= f.label :start %></td>
+    		<td><%= f.datetime_select :start %></td>
+    	</tr>
+    	<tr>
+    		<td><%= f.label :end %></td>
+    		<td><%= f.datetime_select :end %></td>
+    	</tr>
+    	<tr>
+  			<td><%= f.label :content, 'Description' %></td>
+    		<td><%= f.text_area :content %></td>
+    	</tr>
+    </table>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add" %>
+  </div>
+<% end %>

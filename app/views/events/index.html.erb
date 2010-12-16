@@ -1,0 +1,22 @@
+<h1>Search for events</h1>
+<%= render 'event_search_form' %>
+<p />
+<p />
+<% if @search_events %>
+	<h1>Search results</h1>
+	<% if @search_events.empty? %>
+		No matching events
+	<% else %>
+		<%= will_paginate(@p_search_events) %>
+
+		<ul class="events">
+  		<%= render @search_events %>
+		</ul>
+
+		<%= will_paginate(@p_search_events) %>
+	<% end %>
+<% end %>	
+<p />
+<p />
+<h1>Add event</h1>
+<%= render 'event_add_form' %>

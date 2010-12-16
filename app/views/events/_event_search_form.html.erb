@@ -1,0 +1,18 @@
+<%= form_tag(events_path, :method => "get") do %>
+	
+	<table class="field">
+		<tr>
+			<td><%= label_tag("From:") %></td>
+			<td><%= datetime_select(:range, :from) %></td>
+		</tr>
+		<tr>
+			<td><%= label_tag("To:") %></td>
+			<td><%= datetime_select(:range, :to) %></td>
+		</tr>
+	</table>
+	
+	<div class="actions">
+		<%= submit_tag("Search") %>
+	</div>
+			
+<% end %>
